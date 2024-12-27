@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv" data-custom="existing">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Robustly accessing attributes
+    const element = document.getElementById("myDiv");
+    if (element.hasAttribute("data-custom")) {
+      const text = element.getAttribute("data-custom");
+      console.log(text); // Logs "existing"
+    } else {
+      console.log("Attribute does not exist");
+    }
+    //Checking for a non existent attribute
+    if (element.hasAttribute("nonExistentAttr")) {
+      const text = element.getAttribute("nonExistentAttr");
+      console.log(text);
+    } else {
+      console.log("Attribute does not exist");
+    }
+  </script>
+</body>
+</html>
