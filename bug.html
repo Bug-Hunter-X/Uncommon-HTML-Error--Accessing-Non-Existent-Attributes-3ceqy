@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Incorrectly accessing a non-existent attribute
+    const text = document.getElementById("myDiv").getAttribute("nonExistentAttr");
+    console.log(text); // Logs 'null', but might cause unexpected behavior in larger apps
+  </script>
+</body>
+</html>
